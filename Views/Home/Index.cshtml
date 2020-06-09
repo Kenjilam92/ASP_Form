@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container d-flex align-items-center justify-content-center" style="height: 900px;">
+        <div class="border border-primary" style="width: 500px; padding: 20px">
+            <form class="col" action="process" method="post" >
+                <div class="row justify-content-between mb-2">
+                    <label for="name">Your Name:</label>
+                    <input type="text" name="name" class="w-50">
+                </div>
+                <div class="row justify-content-between mb-2">
+                    <label for="name">Location:</label>
+                    <select name="location" id="location" class="w-50">
+                        <option value="San Jose">San Jose</option>
+                        <option value="D.C.">D.C.</option>
+                        <option value="Tulsa">Tulsa</option>
+                        <option value="Texas">Texas</option>
+                    </select>
+                </div>
+                <div class="row justify-content-between mb-2">
+                    <label for="name">Language:</label>
+                    <select name="language" id="language" class="w-50">
+                        <option value="C#">C#</option>
+                        <option value="Python">Python</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="Ruby">Ruby</option>
+                    </select>
+                </div>
+                <div class="row flex-column mb-2">
+                    <label for="comment">Comment(optional):</label>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                    <button class="btn btn-primary align-self-end w-fit mt-2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

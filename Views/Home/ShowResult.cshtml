@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <title>Document</title>
+</head>
+<body>
+    <div class="container d-flex align-items-center justify-content-center" style="height: 900px; padding: 20px ;">
+        <div class="border border-primary" style="width: 100%; height: fit-content; padding: 20px">
+            <h1>Submitted Info</h1>
+            <div class="col align-self-center justify-items-center">
+                <div class="row">
+                    <p class="col-5">Name:</p>
+                    <p class="col-7">@ViewBag.Name</p>
+                </div>
+                <div class="row">
+                    <p class="col-5">Dojo Location:</p>
+                    <p class="col-7">@ViewBag.Location</p>
+                </div>
+                <div class="row">
+                    <p class="col-5">Favorite Language:</p>
+                    <p class="col-7">@ViewBag.Language</p>
+                </div>
+                <div class="row">
+                    <p class="col-5">Comment</p>
+                    <p class="col-7">@ViewBag.Comment</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end align-self-end">
+                <a href="/" class="btn btn-primary">Go Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
