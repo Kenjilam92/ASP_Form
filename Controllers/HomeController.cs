@@ -1,7 +1,12 @@
-
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using form.Models;
 
-namespace Form.Controllers
+namespace form.Controllers
 {
     public class HomeController : Controller
     {
@@ -10,15 +15,33 @@ namespace Form.Controllers
         {
             return View();
         }
-        [HttpPost]
-        [Route("process")]
-        public IActionResult ShowResult(string name, string location, string language, string comment)
+        [HttpPost("process")]
+        public IActionResult Process(string name, string location, string language, string comment)
+        {   Survey Result = new Survey ()
+            {
+                Name = name,
+                Location = location,
+                Language = language,
+                Comment = comment
+            };
+            return RedirectToAction("result",Result);
+        }
+        [HttpGet("result")]
+        public IActionResult Result(Survey Result)
         {
-            ViewBag.Name=name;
-            ViewBag.Location=location;
-            ViewBag.language=language;
-            ViewBag.Comment=comment;
+            return View(Result);
+        }
+
+
+        public IActionResult Privacy()
+        {
             return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

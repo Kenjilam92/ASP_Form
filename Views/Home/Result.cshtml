@@ -1,0 +1,27 @@
+@model Survey;
+<div class="container d-flex align-items-center justify-content-center" style="height: 900px; padding: 20px ;">
+    <div class="border border-primary" style="width: 100%; height: fit-content; padding: 20px">
+        <h1>Submitted Info</h1>
+        <div class="col align-self-center justify-items-center">
+            <div class="row">
+                <p class="col-5">Name:</p>
+                <p class="col-7">@Model.Name</p>
+            </div>
+            <div class="row">
+                <p class="col-5">Dojo Location:</p>
+                <p class="col-7">@Model.Location</p>
+            </div>
+            <div class="row">
+                <p class="col-5">Favorite Language:</p>
+                <p class="col-7">@Model.Language</p>
+            </div>
+            <div class="row">
+                <p class="col-5">Comment</p>
+                <p class="col-7">@Model.Comment</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end align-self-end">
+            <a href="/" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+</div>
