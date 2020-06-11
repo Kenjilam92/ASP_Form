@@ -16,15 +16,12 @@ namespace form.Controllers
             return View();
         }
         [HttpPost("process")]
-        public IActionResult Process(string name, string location, string language, string comment)
-        {   Survey Result = new Survey ()
-            {
-                Name = name,
-                Location = location,
-                Language = language,
-                Comment = comment
-            };
-            return RedirectToAction("result",Result);
+        public IActionResult Process(Survey newForm)
+        {   
+            if(ModelState.IsValid)
+                return RedirectToAction("result",newForm);
+            else
+                return View("Index");
         }
         [HttpGet("result")]
         public IActionResult Result(Survey Result)
